@@ -5,10 +5,10 @@
 <h3><a id="user-content-block" class="anchor" href="#block" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block</h3>
 
 <pre><code>  /api/block/[:hash]
-  /api/block/0000000000000000079c58e8b5bce4217f7515a74b170049398ed9b8428beb4a
+  /api/block/12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2
 </code></pre>
 
-<a target="_blank" href="https://blockexplorer.com/api/block/0000000000000000079c58e8b5bce4217f7515a74b170049398ed9b8428beb4a">Example</a>
+<a target="_blank" href="http://fsight.chain.tips/api/block/12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2">Example</a>
 
 <h3><a id="user-content-block-index" class="anchor" href="#block-index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block index</h3>
 
@@ -20,25 +20,25 @@
 
 <p>This would return:</p>
 
-<pre><code>{"blockHash":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"}
+<pre><code>{"blockHash":"12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"}
 </code></pre>
 
 <p>which is the hash of the Genesis block (0 height)</p>
 
-<a target="_blank" href="https://blockexplorer.com/api/block-index/0">Example</a>
+<a target="_blank" href="http://fsight.chain.tips/api/block-index/0">Example</a>
 
 <h3><a id="user-content-transaction" class="anchor" href="#transaction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transaction</h3>
 
 <pre><code>  /api/tx/[:txid]
-  /api/tx/5756ff16e2b9f881cd15b8a7e478b4899965f87f553b6210d0f8e5bf5be7df1d</code></pre>
+  /api/tx/6ce537b61f0f1986dcaed3e963655eca6adf1f3bd29ac60436a7236ba21f9bb6</code></pre>
 
-<p><a target="_blank" href="https://blockexplorer.com/api/tx/5756ff16e2b9f881cd15b8a7e478b4899965f87f553b6210d0f8e5bf5be7df1d">Example</a></p>
+<p><a target="_blank" href="http://fsight.chain.tips/api/tx/6ce537b61f0f1986dcaed3e963655eca6adf1f3bd29ac60436a7236ba21f9bb6">Example</a></p>
 
 <pre><code>  /api/rawtx/[:rawid]
-  /api/rawtx/5756ff16e2b9f881cd15b8a7e478b4899965f87f553b6210d0f8e5bf5be7df1d
+  /api/rawtx/6ce537b61f0f1986dcaed3e963655eca6adf1f3bd29ac60436a7236ba21f9bb6
 </code></pre>
 
-<p><a target="_blank" href="https://blockexplorer.com/api/rawtx/5756ff16e2b9f881cd15b8a7e478b4899965f87f553b6210d0f8e5bf5be7df1d">Example</a></p>
+<p><a target="_blank" href="http://fsight.chain.tips/api/rawtx/6ce537b61f0f1986dcaed3e963655eca6adf1f3bd29ac60436a7236ba21f9bb6">Example</a></p>
 
 <h3><a id="user-content-address" class="anchor" href="#address" aria-hidden="true"><span class="octicon octicon-link"></span></a>Address</h3>
 
@@ -46,13 +46,13 @@
 
 <pre><code>  /api/addr-validate/[:addr]</code></pre> 
 
-<p><a target="_blank" href="https://blockexplorer.com/api/addr-validate/19SokJG7fgk8iTjemJ2obfMj14FM16nqzj">Example</a></p>
+<p><a target="_blank" href="http://fsight.chain.tips/api/addr-validate/6zc4AdcFwbchbTRcM5W5cWjQuFTj9bnNHy">Example</a></p>
 
 <pre><code>  /api/addr/[:addr][?noTxList=1&amp;noCache=1]
-  /api/addr/19SokJG7fgk8iTjemJ2obfMj14FM16nqzj
+  /api/addr/6zc4AdcFwbchbTRcM5W5cWjQuFTj9bnNHy
 </code></pre>
 
-<a target="_blank" href="https://blockexplorer.com/api/addr/19SokJG7fgk8iTjemJ2obfMj14FM16nqzj">Example</a>
+<a target="_blank" href="http://fsight.chain.tips/api/addr/6zc4AdcFwbchbTRcM5W5cWjQuFTj9bnNHy">Example</a>
 
 <h3><a id="user-content-address-properties" class="anchor" href="#address-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Address Properties</h3>
 
@@ -69,25 +69,28 @@
 <pre><code>  /api/addr/[:addr]/utxo[?noCache=1]
 </code></pre>
 
+<pre><code>  /api/addr/6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT/utxo
+</code></pre>
+
 <p>Sample return:</p>
 
 <div class="highlight highlight-json"><pre>[
     {
-      <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>n2PuaAguxZqLddRbTnAoAuwKYgN2w2hZk7<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>txid<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>dbfdc2a0d22a8282c4e7be0452d595695f3a39173bed4f48e590877382b112fc<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>txid<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>dcdd7911737b2dbf3df5a0a974b20a260ee2f73142723e9fda06d7e5956f9cf7<span class="pl-pds">"</span></span>,
       <span class="pl-s"><span class="pl-pds">"</span>vout<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>,
-      <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>: <span class="pl-c1">1401276201</span>,
-      <span class="pl-s"><span class="pl-pds">"</span>scriptPubKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>76a914e50575162795cd77366fb80d728e3216bd52deac88ac<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span>: <span class="pl-c1">0.001</span>,
-      <span class="pl-s"><span class="pl-pds">"</span>confirmations<span class="pl-pds">"</span></span>: <span class="pl-c1">3</span>
+      <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>: <span class="pl-c1">1464609129</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>scriptPubKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>76a9144063103386ed930003f41988fa1142c144a96cc088ac<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span>: <span class="pl-c1">80</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>confirmations<span class="pl-pds">"</span></span>: <span class="pl-c1">5</span>
     },
     {
-      <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>n2PuaAguxZqLddRbTnAoAuwKYgN2w2hZk7<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>txid<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>e2b82af55d64f12fd0dd075d0922ee7d6a300f58fe60a23cbb5831b31d1d58b4<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>txid<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2364478abb02174c6bf4024852842567197c26f63099be3408613ce42a0191fd<span class="pl-pds">"</span></span>,
       <span class="pl-s"><span class="pl-pds">"</span>vout<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>,
-      <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>: <span class="pl-c1">1401226410</span>,
-      <span class="pl-s"><span class="pl-pds">"</span>scriptPubKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>76a914e50575162795cd77366fb80d728e3216bd52deac88ac<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span>: <span class="pl-c1">0.001</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>: <span class="pl-c1">1464609031</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>scriptPubKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>76a9144063103386ed930003f41988fa1142c144a96cc088ac<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span>: <span class="pl-c1">80</span>,
       <span class="pl-s"><span class="pl-pds">"</span>confirmation<span class="pl-pds">"</span></span>: <span class="pl-c1">6</span>,
       <span class="pl-s"><span class="pl-pds">"</span>confirmationsFromCache<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>
     }
@@ -100,7 +103,7 @@
 <p>GET method:</p>
 
 <pre><code>  /api/addrs/[:addrs]/utxo
-  /api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
+  /api/addrs/6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT,6xvAxfPwsf9pmrK1J8zT2GD4fRSdLDNYYU/utxo
 </code></pre>
 
 <p>POST method:</p>
@@ -110,19 +113,19 @@
 
 <p>POST params:</p>
 
-<pre><code>addrs: 2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f
+<pre><code>addrs: 6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT,6xvAxfPwsf9pmrK1J8zT2GD4fRSdLDNYYU
 </code></pre>
 
 <h3><a id="user-content-transactions-by-block" class="anchor" href="#transactions-by-block" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transactions by Block</h3>
 
 <pre><code>  /api/txs/?block=HASH
-  /api/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
+  /api/txs/?block=12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2 
 </code></pre>
 
 <h3><a id="user-content-transactions-by-address" class="anchor" href="#transactions-by-address" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transactions by Address</h3>
 
 <pre><code>  /api/txs/?address=ADDR
-  /api/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
+  /api/txs/?address=6jbthqSW2KMfiRbxV13z7bfPqQ16KJ3UJT
 </code></pre>
 
 <h3><a id="user-content-transactions-for-multiple-addresses" class="anchor" href="#transactions-for-multiple-addresses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transactions for multiple addresses</h3>
@@ -205,7 +208,7 @@ to (optional): 20
   }
 </code></pre>
 
-<h3><a id="user-content-status-of-the-bitcoin-network" class="anchor" href="#status-of-the-bitcoin-network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Status of the bitcoin network</h3>
+<h3><a id="user-content-status-of-the-bitcoin-network" class="anchor" href="#status-of-the-bitcoin-network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Status of the feathercoin network</h3>
 
 <pre><code>  /api/status?q=xxx
 </code></pre>
@@ -213,11 +216,11 @@ to (optional): 20
 <p>Where "xxx" can be:</p>
 
 <ul>
-<li><a target="_blank" href="https://blockexplorer.com/api/status?q=getInfo">getInfo</a></li>
-<li><a target="_blank" href="https://blockexplorer.com/api/status?q=getBlockCount">getBlockCount</a></li>
-<li><a target="_blank" href="https://blockexplorer.com/api/status?q=getDifficulty">getDifficulty</a></li>
-<li><a target="_blank" href="https://blockexplorer.com/api/status?q=getBestBlockHash">getBestBlockHash</a></li>
-<li><a target="_blank" href="https://blockexplorer.com/api/status?q=getLastBlockHash">getLastBlockHash</a></li>
+<li><a target="_blank" href="http://fsight.chain.tips/api/status?q=getInfo">getInfo</a></li>
+<li><a target="_blank" href="http://fsight.chain.tips/api/status?q=getBlockCount">getBlockCount</a></li>
+<li><a target="_blank" href="http://fsight.chain.tips/api/status?q=getDifficulty">getDifficulty</a></li>
+<li><a target="_blank" href="http://fsight.chain.tips/api/status?q=getBestBlockHash">getBestBlockHash</a></li>
+<li><a target="_blank" href="http://fsight.chain.tips/api/status?q=getLastBlockHash">getLastBlockHash</a></li>
 </ul>
 
 <h3><a id="user-content-historic-blockchain-data-sync-status" class="anchor" href="#historic-blockchain-data-sync-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Historic blockchain data sync status</h3>
@@ -289,12 +292,12 @@ Sample output:</p>
 
 <pre><code>&lt;html&gt;
 &lt;body&gt;
-  &lt;script src="https://blockexplorer.com/socket.io/socket.io.js"&gt;&lt;/script&gt;
+  &lt;script src="http://fsight.chain.tips/socket.io/socket.io.js"&gt;&lt;/script&gt;
   &lt;script&gt;
     eventToListenTo = 'tx'
     room = 'inv'
 
-    var socket = io("https://blockexplorer.com/");
+    var socket = io("http://fsight.chain.tips/");
     socket.on('connect', function() {
       // Join the room.
       socket.emit('subscribe', room);

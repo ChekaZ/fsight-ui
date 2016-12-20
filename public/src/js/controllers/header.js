@@ -7,15 +7,18 @@ angular.module('insight.system').controller('HeaderController',
     $rootScope.currency = {
       factor: 1,
       bitstamp: 0,
-      symbol: 'BTC'
+      symbol: 'FTC'
     };
 
-    $scope.menu = [{
+   $scope.menu = [{
       'title': 'Blocks',
       'link': 'blocks'
     }, {
       'title': 'Status',
       'link': 'status'
+    },{
+      'title': 'Api',
+      'link': 'api'
     }];
 
     $scope.openScannerModal = function() {
