@@ -167,7 +167,7 @@
               </div>
             </div>
           </div>
-          <div style="padding-left: 0.7em; padding-bottom: 2em; word-wrap:break-word" data-ng-class="{true: 'v_highlight', false: ''}[from_vout == true && v_index == vout.n]">
+          <div style="padding-left: 0.3em; padding-bottom: 2em; word-wrap:break-word" data-ng-class="{true: 'v_highlight', false: ''}[from_vout == true && v_index == vout.n]">
               <p class="small">
                 <strong translate>Type</strong>
                 <span class="text-muted">{{vout.scriptPubKey.type}}</span>
@@ -176,6 +176,8 @@
                 <p><strong>scriptPubKey</strong></p>
                 <span class="col-md-11 text-muted ellipsis">{{vout.scriptPubKey.asm}}</span>
                 <span class="btn-copy col-md-1" clip-copy="vout.scriptPubKey.asm"></span>
+		<p><strong>Decoded Message</strong></p>
+                <span class="col-md-11 text-muted ellipsis">{{vout.scriptPubKey.asm|tankreplace}}</span>
               </div>
           </div>
         </div>
